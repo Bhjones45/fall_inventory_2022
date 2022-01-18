@@ -1,10 +1,11 @@
 <h1>Create a New Inventory Item</h1>
 <br>
-<%= form_tag(inventory_items_path, method: 'post') do %>
-  <%= label_tag "name_id", "Name" %>
-  <%= text_field_tag(:name) %><br>
-  <%= label_tag "description", "Description" %>
-  <%= text_field_tag(:description) %><br>
-  <%= label_tag "unit_price", "Unit Price" %>
-  <%= text_field_tag(:unit_price) %><br>
+<%= form_with url: inventory_items_path, method: :post, local: true do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field(:name) %><br><br>
+  <%= f.label :description, "Description" %>
+  <%= f.text_field(:description) %><br><br>
+  <%= f.label :unit_price, "Unit Price" %>
+  <%= f.text_field(:unit_price) %><br><br>
+  <%= f.submit %>
 <% end %>

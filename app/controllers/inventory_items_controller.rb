@@ -3,6 +3,10 @@ class InventoryItemsController < ApplicationController
     @inventory_items = InventoryItem.all
   end
 
+  def show
+    @inventory_item = InventoryItem.find(params[:id])
+  end
+
   def new
     @inventory_item = InventoryItem.new
   end

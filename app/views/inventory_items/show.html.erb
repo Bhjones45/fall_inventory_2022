@@ -1,0 +1,12 @@
+<h1><%= @inventory_item.name %></h1>
+<br>
+<p>
+  Description <%= @inventory_item.description %>
+</p><br>
+<p>
+  Unit Price <%= number_to_currency(@inventory_item.unit_price) %>
+</p>
+
+<%= link_to 'Full Inventory List', inventory_items_path %>
+<%= button_to 'Update', edit_inventory_item_path(@inventory_item.id), method: :get %>
+<%= button_to "Delete #{@inventory_item.name}", "/inventory_items/#{@inventory_item.id}", method: :delete %>

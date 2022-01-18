@@ -14,7 +14,7 @@ class InventoryItemsController < ApplicationController
   def create
     inventory_item = InventoryItem.new(items_params)
     inventory_item.save
-    redirect_to '/inventory_items'
+    redirect_to inventory_items_path
   end
 
   def edit
@@ -27,6 +27,12 @@ class InventoryItemsController < ApplicationController
     item.save
 
     redirect_to inventory_item_path
+  end
+
+  def destroy
+    item = InventoryItem.find(params[:id])
+    item.destroy
+    redirect_to inventory_items_path
   end
 
   private

@@ -7,7 +7,7 @@ RSpec.describe 'user can edit an inventory item' do
 
       visit inventory_item_path(item1.id)
 
-      click_link "Update Item"
+      click_on "Update"
 
       expect(current_path).to eq(edit_inventory_item_path)
     end

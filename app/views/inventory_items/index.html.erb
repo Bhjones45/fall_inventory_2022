@@ -1,9 +1,10 @@
 <h1>Inventory Items</h1>
 <% @inventory_items.each do |items| %>
-  <h3> Name: </h3><%= items.name %></br>
-  <h3> Description: </h3><%= items.description %></br>
-  <h3> Unit Price: </h3><%= number_to_currency(items.unit_price) %></br>
-  <%= link_to items.name, inventory_item_path(items.id) %>
+  <h3> Name: </h3><%= link_to items.name, inventory_item_path(items.id) %><br>
+  <h3> Description: </h3><%= items.description %><br>
+  <h3> Unit Price: </h3><%= number_to_currency(items.unit_price) %><br>
+  <%= button_to "Update #{items.name}", edit_inventory_item_path(items.id), method: :get %><br>
+  <%= button_to "Delete #{items.name}", "/inventory_items/#{items.id}", method: :delete %>
 <% end %>
 
 <%= link_to 'Create a new inventory item', new_inventory_item_path %>

@@ -4,7 +4,7 @@
   Description <%= @inventory_item.description %>
 </p><br>
 <p>
-  Unit Price <%= @inventory_item.unit_price %>
+  Unit Price <%= number_to_currency(@inventory_item.unit_price) %>
 </p>
 
 <%= link_to 'Full Inventory List', inventory_items_path %>

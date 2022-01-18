@@ -7,7 +7,6 @@ RSpec.describe 'user sees all inventory items' do
       item2 = InventoryItem.create!(name: 'binders', description: 'Holds all of your cards', unit_price: 5.00)
 
       visit '/inventory_items'
-      save_and_open_page
       expect(page).to have_content(item1.name)
       expect(page).to have_content(item1.description)
       expect(page).to have_content(item1.unit_price)

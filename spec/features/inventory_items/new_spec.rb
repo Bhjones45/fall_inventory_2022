@@ -12,7 +12,7 @@ RSpec.describe 'user creates a new item' do
       fill_in 'name', with: "Floating Flamingo"
       fill_in 'description', with: 'Float around in style'
       fill_in 'unit_price', with: '170.99'
-      click_on "Submit"
+      click_on "Save"
 
       expect(page).to have_content('Floating Flamingo')
       expect(page).to have_content('Float around in style')

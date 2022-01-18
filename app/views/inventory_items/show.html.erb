@@ -8,5 +8,4 @@
 </p>
 
 <%= link_to 'Full Inventory List', inventory_items_path %>
-<%= button_to 'Update', edit_inventory_item_path %>
-<%= button_to 'Delete', edit_inventory_item_path %>
+<%= button_to 'Update', edit_inventory_item_path(@inventory_item.id), method: :get %>

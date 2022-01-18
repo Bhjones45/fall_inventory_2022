@@ -17,6 +17,18 @@ class InventoryItemsController < ApplicationController
     redirect_to '/inventory_items'
   end
 
+  def edit
+    @inventory_item = InventoryItem.find(params[:id])
+  end
+
+  def update
+    item = InventoryItem.find(params[:id])
+    item.update(items_params)
+    item.save
+
+    redirect_to inventory_item_path
+  end
+
   private
 
   def items_params

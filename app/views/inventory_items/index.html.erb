@@ -4,3 +4,5 @@
   <h3> Description: </h3><%= items.description %></br>
   <h3> Unit Price: </h3><%= number_to_currency(items.unit_price) %></br>
 <% end %>
+
+<%= link_to 'Create a new inventory item', new_inventory_item_path %>

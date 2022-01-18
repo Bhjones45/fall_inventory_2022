@@ -1,0 +1,12 @@
+<h1><%= @inventory_item.name %></h1>
+<br>
+<p>
+  Description <%= @inventory_item.description %>
+</p><br>
+<p>
+  Unit Price <%= @inventory_item.unit_price %>
+</p>
+
+<%= link_to 'Full Inventory List', inventory_items_path %>
+<%= button_to 'Update', edit_inventory_item_path %>
+<%= button_to 'Delete', edit_inventory_item_path %>

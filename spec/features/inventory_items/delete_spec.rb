@@ -40,7 +40,6 @@ RSpec.describe 'can delete an inventory item ' do
       item2 = InventoryItem.create!(name: 'Binders', description: 'Holds all of your cards', unit_price: 5.00)
 
       visit inventory_item_path(item1.id)
-save_and_open_page
       click_on "Delete #{item1.name}"
 
       expect(page).to_not have_content(item1.name)

@@ -6,6 +6,6 @@
   <%= button_to "Update #{items.name}", edit_inventory_item_path(items.id), method: :get %><br>
   <%= button_to "Delete #{items.name}", "/inventory_items/#{items.id}", method: :delete %>
 <% end %>
-
-<%= link_to 'Create a new inventory item', new_inventory_item_path %>
+<br>
+<%= link_to 'Create a new inventory item', new_inventory_item_path %><br><br>
 <a href="/inventory_items.csv"><button class="btn btn-success">export all</button></a>

@@ -1,6 +1,11 @@
 class InventoryItemsController < ApplicationController
   def index
     @inventory_items = InventoryItem.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @inventory_items.to_csv }
+    end
   end
 
   def show

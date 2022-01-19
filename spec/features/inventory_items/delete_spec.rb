@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'can delete an inventory item ' do
-  describe "from index page" do
+  describe 'from index page' do
     it 'can see a button to delete an item' do
       item1 = InventoryItem.create!(name: 'cards', description: '1st edition card', unit_price: 4.70)
       item2 = InventoryItem.create!(name: 'binders', description: 'Holds all of your cards', unit_price: 5.00)

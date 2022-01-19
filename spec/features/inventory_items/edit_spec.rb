@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'user can edit an inventory item' do
@@ -29,7 +31,7 @@ RSpec.describe 'user can edit an inventory item' do
 
       visit inventory_item_path(item1.id)
 
-      click_on "Update"
+      click_on 'Update'
       expect(current_path).to eq(edit_inventory_item_path(item1.id))
     end
   end
@@ -40,15 +42,15 @@ RSpec.describe 'user can edit an inventory item' do
 
       visit edit_inventory_item_path(item1.id)
 
-      fill_in "Name", with: "Trading cards"
-      fill_in "description", with: "Newest released set"
-      fill_in "unit_price", with: 4.70
+      fill_in 'Name', with: 'Trading cards'
+      fill_in 'description', with: 'Newest released set'
+      fill_in 'unit_price', with: 4.70
 
-      click_on "Save"
+      click_on 'Save'
 
       expect(current_path).to eq(inventory_item_path(item1.id))
-      expect(page).to have_content("Trading cards")
-      expect(page).to have_content("Newest released set")
+      expect(page).to have_content('Trading cards')
+      expect(page).to have_content('Newest released set')
     end
   end
 end

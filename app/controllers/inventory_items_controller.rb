@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class InventoryItemsController < ApplicationController
   def index
     @inventory_items = InventoryItem.all

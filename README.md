@@ -2,7 +2,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-The Ruby on Rails Shopify Backend Developer Intern Challenge summer 2022.  The task of this application is to build an inventory tracking web application for a logistics company.  The application features full CRUD functionality for inventory items and allows for a single feature to export all product data to a CSV file.
+The Ruby on Rails Shopify Backend Developer Intern Challenge fall 2022.  The task of this application is to build an inventory tracking web application for a logistics company.  The application features full CRUD functionality for inventory items and allows for a single feature to export all product data to a CSV file.
 
 
 ## Table of Contents

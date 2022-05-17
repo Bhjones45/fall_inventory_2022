@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 2022_05_17_194238) do
   end
 
   create_table "location_inventories", force: :cascade do |t|
-    t.bigint "inventory_items_id"
+    t.bigint "inventory_item_id"
     t.bigint "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["inventory_items_id"], name: "index_location_inventories_on_inventory_items_id"
+    t.index ["inventory_item_id"], name: "index_location_inventories_on_inventory_item_id"
     t.index ["location_id"], name: "index_location_inventories_on_location_id"
   end
 
@@ -39,6 +39,6 @@ ActiveRecord::Schema.define(version: 2022_05_17_194238) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "location_inventories", "inventory_items", column: "inventory_items_id"
+  add_foreign_key "location_inventories", "inventory_items"
   add_foreign_key "location_inventories", "locations"
 end

@@ -4,6 +4,9 @@ class InventoryItem < ApplicationRecord
   validates :name, presence: true
   validates :unit_price, presence: true
 
+  has_many :location_inventories
+  has_many :locations, through: :location_inventories
+
   def self.to_csv
     attributes = %w[id name description unit_price created_at updated_at]
     CSV.generate(headers: true) do |csv|

@@ -1,0 +1,10 @@
+<h1>Create a New Location</h1>
+<br>
+<%= form_with url: locations_path, method: :post, local: true do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field(:name) %><br><br>
+  <%= f.label :description, "Description" %>
+  <%= f.text_field(:description) %>
+  <%= f.collection_check_boxes :inventory_item_ids, InventoryItem.all, :id, :name, {hide_label: true} %>
+  <%= f.submit %>
+<% end %>

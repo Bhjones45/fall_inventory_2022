@@ -6,4 +6,4 @@ Rails.application.routes.draw do
   # get '/inventory_items', to: 'inventory_items#index'
   resources :inventory_items
   resources :locations
-  end
+end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LocationsController < ApplicationController
   def index
     @locations = Location.all
@@ -16,7 +18,6 @@ class LocationsController < ApplicationController
   def show
     @location = Location.find(params[:id])
     @inventory_items = InventoryItem.all
-
   end
 
   private

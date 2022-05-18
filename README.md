@@ -80,7 +80,7 @@ rails s
 
 
 ### Running Locally
-Run the server in your command line with `rails server` or `rails s`. The application begins at `localhost:3000/inventory_items` from here you should be able to navigate the complete CRUD functionality of the website through links and buttons. 
+Run the server in your command line with `rails server` or `rails s`. The application begins at `localhost:3000/inventory_items` `localhost:3000/locations` or from here you should be able to navigate the complete CRUD functionality of the website through links and buttons. 
 
 
 

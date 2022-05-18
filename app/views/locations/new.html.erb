@@ -4,7 +4,7 @@
   <%= f.label :name, "Name" %>
   <%= f.text_field(:name) %><br><br>
   <%= f.label :description, "Description" %>
-  <%= f.text_field(:description) %>
-  <%= f.collection_check_boxes :inventory_item_ids, InventoryItem.all, :id, :name, {hide_label: true} %>
+  <%= f.text_field(:description) %><br><br>
+  <%= f.collection_check_boxes :inventory_item_ids, InventoryItem.all, :id, :name, {hide_label: true} %><br><br>
   <%= f.submit %>
 <% end %>
